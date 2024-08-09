@@ -1,0 +1,261 @@
+week5
+
+1.
+Running
+Enter a number : 5
+
+*****
+*****
+*****
+*****
+*****
+
+Running
+Enter a number : 3
+
+***
+***
+***
+
+#include<stdio.h>
+int main(){
+	int num,i,j;
+	printf("Enter a number :");
+	scanf("%d",&num);
+	for(i=1;i<=num;i++){
+		for(j=1;j<=num;j++){
+			printf("*");
+		}
+		printf("\n");
+	}
+	return 0;
+}
+
+2.Running
+Enter a number : 5
+*****
+*   *
+*   *
+*   *
+*****
+Enter a number : 3
+***
+* *
+***
+
+#include<stdio.h>
+int main(){
+	int num,i,j;
+	printf("Enter a number :");
+	scanf("%d",&num);
+	for(i=1;i<=num;i++){
+		for(j=1;j<=num;j++){
+			if(i==1 || i==num||j==1 || j==num){
+				printf("*");
+			}
+			else{
+				printf(" ");
+			}	
+		}
+		printf("\n");
+	}
+	return 0;
+}
+
+3.Running
+Enter a number : 5
+OXOXO
+XOXOX
+OXOXO
+XOXOX
+OXOXO
+
+Enter a number :4
+OXOX
+XOXO
+OXOX
+XOXO
+
+#include<stdio.h>
+int main(){
+	int num,i,j;
+	printf("Enter a number :");
+	scanf("%d",&num);
+	for(i=1;i<=num;i++){
+		for(j=1;j<=num;j++){
+			if((i+j)%2==0){
+				printf("O");
+			}
+			else{
+				printf("X");
+			}	
+		}
+		printf("\n");
+	}
+	return 0;
+}
+
+4.
+Running
+Enter a number : 5
+0---0
+|xxx|
+|xxx|
+|xxx|
+0---0
+Enter a number : 3
+0-0
+|X|
+0-0
+
+#include<stdio.h>
+int main(){
+	int num,i,j;
+	printf("Enter a number :");
+	scanf("%d",&num);
+	for(i=1;i<=num;i++){
+		for(j=1;j<=num;j++){
+			if(i==1||i==num){
+				printf("%c", (j==1)||(j==num) ? '0':'-');
+			}
+			else{
+				printf("%c", (j==1)||(j==num) ? '|':'X');
+			}	   	
+		}
+		printf("\n");
+	}
+	return 0;
+}
+
+5.
+Running
+Enter a number : 5
+O+++O
+-%+++
+--%++
+---%+
+O---O
+
+#include<stdio.h>
+int main(){
+	int num,i,j;
+	printf("Enter a number :");
+	scanf("%d",&num);
+	for(i=1;i<=num;i++){
+		for(j=1;j<=num;j++){
+			if((i==1 || i== num)&&(j==1 || j==num))
+				printf("O");
+			else if(i<j)
+			   printf("+");
+			else if(i>j)
+			   printf("-");
+			else  
+			   printf("%%");	
+		}
+		printf("\n");
+	}
+	return 0;
+}
+
+6.
+Running
+Enter a number : 5
+    *
+   **
+  ***
+ ****
+*****
+
+#include<stdio.h>
+int main(){
+	int num,i,j,d;
+	printf("Enter a number :");
+	scanf("%d",&num);
+	for(i=1;i<=num;i++){
+		for(j=1;j<=num-i;j++){
+			printf(" ");	
+		}
+		for(j=1;j<=i;j++){
+			printf("*");
+		}	
+		printf("\n");
+	}
+	return 0;
+}
+
+7.Running
+Enter a number : 5
+    *
+   ***
+  *****
+ *******
+*********
+#include<stdio.h>
+int main(){
+	int num,i,j,d;
+	printf("Enter a number :");
+	scanf("%d",&num);
+	for(i=1;i<=num;i++){
+		for(j=1;j<=num-i;j++){
+			printf(" ");	
+		}
+		for(j=1;j<=i;j++){
+			printf("*");
+		}
+		for(j=1;j<i;j++){
+			printf("*");
+		}	
+		printf("\n");
+	}
+	return 0;
+}
+
+#include<stdio.h>
+int main(){
+	int num,i,j,d;
+	printf("Enter a number :");
+	scanf("%d",&num);
+	for(i=1;i<=num;i++){
+		for(j=1;j<=num-i;j++){
+			printf(" ");	
+		}
+		for(j=1;j<=2*i-1;j++){
+			printf("*");
+		}
+	
+		printf("\n");
+	}
+	return 0;
+}
+
+8.
+Running
+Enter a number : 5
+    *
+   * *
+  *   *
+ *     *
+*********
+
+#include<stdio.h>
+int main(){
+	int num,i,j,d;
+	printf("Enter a number :");
+	scanf("%d",&num);
+	for(i=1;i<=num;i++){
+		for(j=1;j<=num-i;j++){
+			printf(" ");	
+		}
+		for(j=1;j<=2*i-1;j++){
+			if(j==1 || j==2*i-1 ||i==num){
+				printf("*");
+			}
+			else{
+				printf(" ");
+			}
+		}
+	
+		printf("\n");
+	}
+	return 0;
+}
